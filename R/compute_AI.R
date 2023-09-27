@@ -41,6 +41,7 @@ compute_AI <- function(data = sample_data,
 data4<-data2[,grep("AI", names(data2))]
 data<-cbind(data,data4)
 
+return(data)
 }
 
 #example
