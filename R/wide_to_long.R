@@ -10,6 +10,10 @@ wide2long<-function(data,
     stop("Hemisphere indicator should be the prefix.")
   } else{
 
+#
+#     start<-match(start,names(data))
+#     end<-match(end,names(data))
+
     d<-reshape(data=data,
                     direction="long",
                     idvar=ID,
@@ -17,7 +21,7 @@ wide2long<-function(data,
                     sep=separator,
                     timevar="region")
 
-  data<-d[order(d[,ID]),]
+  data<-data.frame(d[order(d[,ID]),])
 
 
   }
@@ -28,11 +32,12 @@ wide2long<-function(data,
 
 #example
 
-results<-wide2long(data=sample_data,
+long<-wide2long(data=sample_data,
                    ID="ID",
                    separator="_",
                    start=2,
                    end=15,
-                   hemisphere="f"
+                   hemisphere="prefix"
                    )
 
+long<-data.frame(long)
