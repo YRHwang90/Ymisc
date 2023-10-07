@@ -1,3 +1,30 @@
+#' compute_AI function calculates regional brain asymmetry index (AI).
+#' This function use most-widely used formula.
+#' AI = [(left-right)/(left+right)]
+#'
+#' @param data The wide format data
+#' @param ID The column of identifiers.
+#' @param left_hemisphere The prefix or suffix that indicate left hemisphere in the variable names
+#' @param right_hemisphere The prefix or suffix string that indicate right hemisphere in the variable names
+#' @param hemisphere Whether a hemisphere indicator in the variable names is prefix or suffix.
+#' @param seperator A character vector that separating character in the variable names.
+#' @param start The column that contains  brain measures that needs to calculate AI.
+#' @param end The column that contains  brain measures that needs to calculate AI.
+#' @return The data with AIs.
+#'
+#' @export
+#'
+#' @example
+#'
+#'compute_AI(sample_data,
+#'left_hemisphere = "lh",
+#'right_hemisphere = "rh",
+#'separator="_",
+#'ID="ID",
+#'hemisphere="prefix",
+#'start="lh_Thalamus",
+#'end="rh_AccumbensArea")
+
 compute_AI <- function(data = sample_data,
                        left_hemisphere = "lh",
                        right_hemisphere = "rh",
@@ -7,6 +34,10 @@ compute_AI <- function(data = sample_data,
                        start ,
                        end  ) {
 
+
+
+  start<-match(start,names(data))
+  end<-match(end,names(data))
 
   NID<-match(ID,names(data))
   data2<-data[,c(start:end,NID)]
@@ -39,18 +70,7 @@ compute_AI <- function(data = sample_data,
   }
 
 data4<-data2[,grep("AI", names(data2))]
-data<-cbind(data,data4)
+data<-data.frame(cbind(data,data4))
 
 return(data)
 }
-
-#example
-
-data7<-compute_AI(sample_data,
-                       left_hemisphere = "lh",
-                       right_hemisphere = "rh",
-                       seperator="_",
-                       ID="ID",
-                       hemisphere="prefix",
-                       start=2 ,
-                       end=15 )

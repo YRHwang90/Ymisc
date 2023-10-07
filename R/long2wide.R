@@ -1,26 +1,25 @@
-
-#' long2wide function is data-reshaping function for data.#'
+#' long2wide function is data-reshaping function for data.
 #' This function targets mainly on that brain structure data that contains the data from the left and right hemisphere
 #'
 #' @param data The long-formatted data.
 #' @param ID The column of identifiers.
 #' @param seperator A character vector that separating character in the variable names.
 #' @param hemisphere Whether a hemisphere indicator in the variable names is prefix or suffix. At this point, only "prefix" option is available.
-#' @param start The column that indicate a sets of variables that correspond to be more variables in wide format
-#' @param end The column that indicate a sets of variables that correspond to be more variables in wide format
+#' @param start The column that indicate a sets of variables that distinguish multiple type of information from one participants
+#' @param end The column that indicate a sets of variables that distinguish multiple type of information from one participants
 #' @return The wide format data
 #'
 #' @export
 #'
 #' @example
 #'
-#' wide<-long2wide(
-#' data = long,
+#' long2wide(
+#' data = sample_data,
 #' ID="ID",
 #' separator="_",
 #' hemisphere="prefix",
-#' start="
-#'
+#' start="lh_Thalamus",
+#' end="rh_AccumbensArea"
 #' )
 
 long2wide<-function(data,
@@ -46,7 +45,8 @@ long2wide<-function(data,
                              direction = "wide",
                              sep=separator)
 
-    data<- reshaped_data[order(reshaped_data[,ID]),]
+    data<- data.frame(reshaped_data[order(reshaped_data[,ID]),])
+
     return(data)
   }
   }
