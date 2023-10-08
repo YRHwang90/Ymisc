@@ -12,7 +12,7 @@
 #'
 #' @export
 #'
-#' @example
+#' @examples
 #'
 #'compute_total(sample_data,
 #'left_hemisphere = "lh",

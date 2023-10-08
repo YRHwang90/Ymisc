@@ -11,7 +11,7 @@
 #'
 #' @export
 #'
-#' @example
+#' @examples
 #'
 #' long2wide(
 #' data = sample_data,

@@ -13,7 +13,7 @@
 #'
 #' @export
 #'
-#' @example
+#' @examples
 #'
 #'compute_AI(sample_data,
 #'left_hemisphere = "lh",

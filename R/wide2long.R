@@ -12,7 +12,7 @@
 #' @export
 #'
 #'
-#' @example
+#' @examples
 #'
 #'long<-wide2long(
 #' data=sample_data,
