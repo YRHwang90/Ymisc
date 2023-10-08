@@ -5,8 +5,8 @@
 #' @param ID The column of identifiers.
 #' @param separator A character vector that separates characters in the variable names.
 #' @param hemisphere The character vector that indicates whether a hemisphere indicator in the variable names is the prefix or suffix. At this point, only a "prefix" option is available.
-#' @param start The column that specifies the starting point of a set of variables that distinguish multiple types of information from one participant.
-#' @param end The column that specifies the endpoint of a set of variables that distinguish multiple types of information from one participant.
+#' @param start The column that specifies the starting point of a set of variables to be reshaped.
+#' @param end The column that specifies the endpoint of a set of variables to be reshaped.
 #' @return The wide format data
 #'
 #' @export

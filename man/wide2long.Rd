@@ -16,9 +16,9 @@ wide2long(data, ID = "ID", separator = "_", hemisphere = "prefix", start, end)
 
 \item{hemisphere}{Whether a hemisphere indicator in the variable names is a prefix or suffix. At this point, only the "prefix" option is available.}
 
-\item{start}{The column that specifies the starting point of a set of variables that correspond to be  single variables}
+\item{start}{The column that specifies the starting point of a set of variables to be reshaped}
 
-\item{end}{The column that specifies the endpoint of a set of variables that correspond to be  single variables}
+\item{end}{The column that specifies the endpoint of a set of variables to be reshaped}
 }
 \value{
 The long format data

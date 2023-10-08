@@ -16,9 +16,9 @@ long2wide(data, ID = "ID", separator = "_", hemisphere = "prefix", start, end)
 
 \item{hemisphere}{The character vector that indicates whether a hemisphere indicator in the variable names is the prefix or suffix. At this point, only a "prefix" option is available.}
 
-\item{start}{The column that specifies the starting point of a set of variables that distinguish multiple types of information from one participant.}
+\item{start}{The column that specifies the starting point of a set of variables to be reshaped.}
 
-\item{end}{The column that specifies the endpoint of a set of variables that distinguish multiple types of information from one participant.}
+\item{end}{The column that specifies the endpoint of a set of variables to be reshaped.}
 }
 \value{
 The wide format data
