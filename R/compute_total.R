@@ -1,13 +1,13 @@
-#' compute_total function calculates bilateral (L+R) measures.
+#' compute_total function calculates the bilateral (L+R) measures.
 #'
 #' @param data The wide format data
 #' @param ID The column of identifiers.
-#' @param left_hemisphere The prefix or suffix that indicate left hemisphere in the variable names
-#' @param right_hemisphere The prefix or suffix string that indicate right hemisphere in the variable names
-#' @param hemisphere Whether a hemisphere indicator in the variable names is prefix or suffix.
-#' @param seperator A character vector that separating character in the variable names.
-#' @param start The column that contains  brain measures that needs to calculate AI.
-#' @param end The column that contains  brain measures that needs to calculate AI.
+#' @param left_hemisphere The prefix or suffix that indicates the left hemisphere in the variable names
+#' @param right_hemisphere The prefix or suffix string that indicate the right hemisphere in the variable names
+#' @param hemisphere The character vector that indicates whether a hemisphere indicator in the variable names is a prefix or suffix.
+#' @param separator A character vector that separates characters in the variable names.
+#' @param start The column that specifies the starting point of a set of variables required for bilateral (L+R) measure calculations.
+#' @param end The column that specifies the endpoint of a set of variables required for bilateral (L+R) measure calculations.
 #' @return The data with the bilateral (L+R) measures.
 #'
 #' @export
@@ -26,7 +26,7 @@
 compute_total <- function(data = sample_data,
                        left_hemisphere = "lh",
                        right_hemisphere = "rh",
-                       seperator="_",
+                       separator="_",
                        ID="ID",
                        hemisphere="prefix",
                        start ,

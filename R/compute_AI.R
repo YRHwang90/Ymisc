@@ -1,15 +1,14 @@
-#' compute_AI function calculates regional brain asymmetry index (AI).
-#' This function use most-widely used formula.
+#' compute_AI function calculates regional brain asymmetry index (AI) using widely-used formula.
 #' AI = [(left-right)/(left+right)]
 #'
 #' @param data The wide format data
 #' @param ID The column of identifiers.
-#' @param left_hemisphere The prefix or suffix that indicate left hemisphere in the variable names
-#' @param right_hemisphere The prefix or suffix string that indicate right hemisphere in the variable names
-#' @param hemisphere Whether a hemisphere indicator in the variable names is prefix or suffix.
-#' @param seperator A character vector that separating character in the variable names.
-#' @param start The column that contains  brain measures that needs to calculate AI.
-#' @param end The column that contains  brain measures that needs to calculate AI.
+#' @param left_hemisphere The prefix or suffix that indicates the left hemisphere in the variable names
+#' @param right_hemisphere The prefix or suffix string that indicates the right hemisphere in the variable names
+#' @param hemisphere The character vector that indicates whether a hemisphere indicator in the variable names is a prefix or suffix.
+#' @param separator A character vector that separates characters in the variable names.
+#' @param start The column that specifies the starting point of the column that contains brain measures needed to calculate AI.
+#' @param end The column that specifies the starting point of the column that contains brain measures needed to calculate AI.
 #' @return The data with AIs.
 #'
 #' @export
@@ -28,7 +27,7 @@
 compute_AI <- function(data = sample_data,
                        left_hemisphere = "lh",
                        right_hemisphere = "rh",
-                       seperator="_",
+                       separator="_",
                        ID="ID",
                        hemisphere="prefix",
                        start ,

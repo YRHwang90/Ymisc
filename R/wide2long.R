@@ -1,12 +1,12 @@
-#' wide2long function is data-reshaping function for data.
-#' This function targets mainly on the brain structure data that contains the data from the left and right hemisphere
+#' wide2long function is data-reshaping function for wide format data.
+#' This function mainly targets the brain structure data that contains the data from the left and right hemisphere
 #'
 #' @param data The wide format data.
 #' @param ID The column of identifiers.
-#' @param seperator A character vector that separating character in the variable names.
-#' @param hemisphere Whether a hemisphere indicator in the variable names is prefix or suffix. At this point, only "prefix" option is available.
-#' @param start The column that indicate a sets of variables that correspond to be more variables in wide format
-#' @param end The column that indicate a sets of variables that correspond to be more variables in wide format
+#' @param separator A character vector that separates characters in the variable names.
+#' @param hemisphere Whether a hemisphere indicator in the variable names is a prefix or suffix. At this point, only the "prefix" option is available.
+#' @param start The column that specifies the starting point of a set of variables that correspond to be  single variables
+#' @param end The column that specifies the endpoint of a set of variables that correspond to be  single variables
 #' @return The long format data
 #'
 #' @export
@@ -18,8 +18,8 @@
 #' data=sample_data,
 #' ID="ID",
 #' separator="_",
-#' start=2,
-#' end=15,
+#' start="lh_Thalamus",
+#' end="rh_AccumbensArea",
 #' hemisphere="prefix"
 #' )
 

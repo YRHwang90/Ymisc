@@ -1,12 +1,12 @@
-#' long2wide function is data-reshaping function for data.
-#' This function targets mainly on that brain structure data that contains the data from the left and right hemisphere
+#' long2wide function is data-reshaping function for long format data.
+#' This function mainly targets the brain structure data that contains the data from the left and right hemisphere
 #'
-#' @param data The long-formatted data.
+#' @param data The long format data.
 #' @param ID The column of identifiers.
-#' @param seperator A character vector that separating character in the variable names.
-#' @param hemisphere Whether a hemisphere indicator in the variable names is prefix or suffix. At this point, only "prefix" option is available.
-#' @param start The column that indicate a sets of variables that distinguish multiple type of information from one participants
-#' @param end The column that indicate a sets of variables that distinguish multiple type of information from one participants
+#' @param separator A character vector that separates characters in the variable names.
+#' @param hemisphere The character vector that indicates whether a hemisphere indicator in the variable names is the prefix or suffix. At this point, only a "prefix" option is available.
+#' @param start The column that specifies the starting point of a set of variables that distinguish multiple types of information from one participant.
+#' @param end The column that specifies the endpoint of a set of variables that distinguish multiple types of information from one participant.
 #' @return The wide format data
 #'
 #' @export
