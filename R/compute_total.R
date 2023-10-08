@@ -29,7 +29,7 @@ compute_total <- function(data = sample_data,
                        separator="_",
                        ID="ID",
                        hemisphere="prefix",
-                       start ,
+                       start,
                        end  ) {
 
 
@@ -41,7 +41,7 @@ compute_total <- function(data = sample_data,
 
   namelist<-colnames(data[,c(start:end)])
 
-  slist<-strsplit(namelist,split="_")
+  slist<-strsplit(namelist,split=separator)
 
   llist<-list()
 
