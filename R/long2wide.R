@@ -14,7 +14,7 @@
 #' @examples
 #'
 #' long2wide(
-#' data = long,
+#' data=long,
 #' ID="ID",
 #' separator="_",
 #' hemisphere="prefix",
@@ -33,19 +33,20 @@ long2wide<-function(data,
   }else {
 
 
-    start<-match(start,names(data))
-    end<-match(end,names(data))
+    start <- match(start,names(data))
+    end <- match(end,names(data))
 
-    IDV<-data[,-c(start:end)]
+    IDV <- data[,-c(start:end)]
 
     reshaped_data <- reshape(data=data,
-                             idvar = colnames(IDV),
-                             timevar = "region",
-                             direction = "wide",
+                             idvar=colnames(IDV),
+                             timevar="region",
+                             direction="wide",
                              sep=separator)
+
     rownames(reshaped_data) <- NULL
 
-    data<- data.frame(reshaped_data[order(reshaped_data[,ID]),])
+    data <- data.frame(reshaped_data[order(reshaped_data[,ID]),])
 
     return(data)
   }

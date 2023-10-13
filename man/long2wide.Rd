@@ -30,7 +30,7 @@ This function mainly targets the brain structure data that contains the data fro
 \examples{
 
 long2wide(
-data = long,
+data=long,
 ID="ID",
 separator="_",
 hemisphere="prefix",

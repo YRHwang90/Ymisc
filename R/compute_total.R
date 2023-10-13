@@ -15,17 +15,17 @@
 #' @examples
 #'
 #'compute_total(sample_data,
-#'left_hemisphere = "lh",
-#'right_hemisphere = "rh",
+#'left_hemisphere="lh",
+#'right_hemisphere="rh",
 #'separator="_",
 #'ID="ID",
 #'hemisphere="prefix",
 #'start="lh_Thalamus",
 #'end="rh_AccumbensArea")
 
-compute_total <- function(data = sample_data,
-                       left_hemisphere = "lh",
-                       right_hemisphere = "rh",
+compute_total <- function(data=sample_data,
+                       left_hemisphere="lh",
+                       right_hemisphere="rh",
                        separator="_",
                        ID="ID",
                        hemisphere="prefix",
@@ -35,31 +35,31 @@ compute_total <- function(data = sample_data,
 
 
 
-  start<-match(start,names(data))
-  end<-match(end,names(data))
+  start <- match(start,names(data))
+  end <- match(end,names(data))
 
-  NID<-match(ID,names(data))
-  data2<-data[,c(start:end,NID)]
+  NID <- match(ID,names(data))
+  data2 <- data[,c(start:end,NID)]
 
-  namelist<-colnames(data[,c(start:end)])
+  namelist <- colnames(data[,c(start:end)])
 
-  slist<-strsplit(namelist,split = separator)
+  slist <- strsplit(namelist,split = separator)
 
-  llist<-list()
+  llist <- list()
 
   if(hemisphere=="prefix"){
 
     for(i in 1:length(slist)){
-      llist[i]<-  slist[[i]][2]
+      llist[i] <- slist[[i]][2]
     }
 
   } else if(hemisphere=="suffix"){
 
     for(i in 1:length(slist)){
-      llist[i]<-  slist[[i]][1]
+      llist[i] <- slist[[i]][1]
     }
   }
-  llist<-unique(llist)
+  llist <- unique(llist)
 
   for( i in 1:length(llist)){
 
@@ -68,8 +68,8 @@ compute_total <- function(data = sample_data,
 
   }
 
-  data4<-data2[,grep("total", names(data2))]
-  data<-data.frame(cbind(data,data4))
+  data4 <- data2[,grep("total", names(data2))]
+  data <- data.frame(cbind(data,data4))
 
   return(data)
 }

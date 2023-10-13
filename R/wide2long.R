@@ -36,10 +36,10 @@ wide2long<-function(data,
   } else{
 
 
-    start<-match(start,names(data))
-    end<-match(end,names(data))
+    start <- match(start,names(data))
+    end <- match(end,names(data))
 
-    d<-reshape(data=data,
+    d <- reshape(data=data,
                     direction="long",
                     idvar=ID,
                     varying=start:end,
@@ -48,7 +48,7 @@ wide2long<-function(data,
 
     rownames(d) <- NULL
 
-  data<-data.frame(d[order(d[,ID]),])
+  data <- data.frame(d[order(d[,ID]),])
 
 
   }

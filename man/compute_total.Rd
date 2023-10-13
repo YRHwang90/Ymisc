@@ -41,8 +41,8 @@ compute_total function calculates the bilateral (Left + Right) measures.
 \examples{
 
 compute_total(sample_data,
-left_hemisphere = "lh",
-right_hemisphere = "rh",
+left_hemisphere="lh",
+right_hemisphere="rh",
 separator="_",
 ID="ID",
 hemisphere="prefix",
