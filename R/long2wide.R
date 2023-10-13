@@ -1,5 +1,7 @@
-#' long2wide function is data-reshaping function for long format data.
-#' This function mainly targets the brain structure data that contains the data from the left and right hemisphere
+#' @title Reshapes the data
+#' @description
+#' long2wide() is data-reshaping function for long format data.
+#' This function mainly targets the brain structure data that contains the data from the left and right hemispheres
 #'
 #' @param data The long format data.
 #' @param ID The column of identifiers.

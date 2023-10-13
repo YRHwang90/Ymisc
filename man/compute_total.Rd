@@ -2,7 +2,7 @@
 % Please edit documentation in R/compute_total.R
 \name{compute_total}
 \alias{compute_total}
-\title{compute_total function calculates the bilateral (Left + Right) measures.}
+\title{the bilateral (Left + Right) measures.}
 \usage{
 compute_total(
   data = sample_data,
@@ -36,7 +36,7 @@ compute_total(
 The data with the bilateral (L+R) measures.
 }
 \description{
-compute_total function calculates the bilateral (Left + Right) measures.
+compute_total() creates new columns that are the bilateral (Left + Right) measures.
 }
 \examples{
 

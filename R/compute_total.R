@@ -1,4 +1,7 @@
-#' compute_total function calculates the bilateral (Left + Right) measures.
+#' @title the bilateral (Left + Right) measures.
+#'
+#' @description
+#' compute_total() creates new columns that are the bilateral (Left + Right) measures.
 #'
 #' @param data The wide format data
 #' @param ID The column of identifiers.

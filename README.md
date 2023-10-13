@@ -1,10 +1,22 @@
-The Ymisc package contains several miscellaneous functions
+# Ymisc
 
-It is not yet on CRAN.
-(It is still under development)
+Yoo Ri's personal R package
 
+## Installation 
 
-## Install
+Currently, this package is not on CRAN yet.
 
+The newest version can be installed by:
 
+```{r}
 
+devtools::install_github("yrhwang90/Ymisc")
+
+```
+
+## Maintainer
+
+```{r}
+Yoo Ri Hwang 
+
+```

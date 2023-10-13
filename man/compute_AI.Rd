@@ -2,8 +2,7 @@
 % Please edit documentation in R/compute_AI.R
 \name{compute_AI}
 \alias{compute_AI}
-\title{compute_AI function calculates the brain asymmetry index (AI) using the most widely-used formula.
-AI = [(left-right)/(left+right)]}
+\title{The brain asymmetry index (AI)}
 \usage{
 compute_AI(
   data = sample_data,
@@ -37,8 +36,8 @@ compute_AI(
 The data with AIs.
 }
 \description{
-compute_AI function calculates the brain asymmetry index (AI) using the most widely-used formula.
-AI = [(left-right)/(left+right)]
+AI formula = [(left-right)/(left+right)].
+compute_AI() creates new columns that are AIs of the brain measures using the most widely-used formula.
 }
 \examples{
 

@@ -1,5 +1,8 @@
-#' compute_AI function calculates the brain asymmetry index (AI) using the most widely-used formula.
-#' AI = [(left-right)/(left+right)]
+#' @title The brain asymmetry index (AI)
+#'
+#' @description
+#' AI formula = [(left-right)/(left+right)].
+#' compute_AI() creates new columns that are AIs of the brain measures using the most widely-used formula.
 #'
 #' @param data The wide format data
 #' @param ID The column of identifiers.

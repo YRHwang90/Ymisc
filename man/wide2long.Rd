@@ -2,8 +2,7 @@
 % Please edit documentation in R/wide2long.R
 \name{wide2long}
 \alias{wide2long}
-\title{wide2long function is data-reshaping function for wide format data.
-This function mainly targets the brain structure data that contains the data from the left and right hemisphere}
+\title{Reshapes the data}
 \usage{
 wide2long(data, ID = "ID", separator = "_", hemisphere = "prefix", start, end)
 }
@@ -24,8 +23,8 @@ wide2long(data, ID = "ID", separator = "_", hemisphere = "prefix", start, end)
 The long format data
 }
 \description{
-wide2long function is data-reshaping function for wide format data.
-This function mainly targets the brain structure data that contains the data from the left and right hemisphere
+wide2long() function is data-reshaping function for wide format data.
+This function mainly targets the brain structure data that contains the data from the left and right hemispheres
 }
 \examples{
 
