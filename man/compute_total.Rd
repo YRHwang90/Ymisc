@@ -2,7 +2,7 @@
 % Please edit documentation in R/compute_total.R
 \name{compute_total}
 \alias{compute_total}
-\title{compute_total function calculates the bilateral (L+R) measures.}
+\title{compute_total function calculates the bilateral (Left + Right) measures.}
 \usage{
 compute_total(
   data = sample_data,
@@ -28,15 +28,15 @@ compute_total(
 
 \item{hemisphere}{The character vector that indicates whether a hemisphere indicator in the variable names is a prefix or suffix.}
 
-\item{start}{The column that specifies the starting point of a set of variables required for bilateral (L+R) measure calculations.}
+\item{start}{The column that specifies the starting point of a set of variables to calculate the bilateral (L+R) measures.}
 
-\item{end}{The column that specifies the endpoint of a set of variables required for bilateral (L+R) measure calculations.}
+\item{end}{The column that specifies the endpoint of a set of variables to calculate the bilateral (L+R) measures.}
 }
 \value{
 The data with the bilateral (L+R) measures.
 }
 \description{
-compute_total function calculates the bilateral (L+R) measures.
+compute_total function calculates the bilateral (Left + Right) measures.
 }
 \examples{
 

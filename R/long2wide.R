@@ -14,13 +14,12 @@
 #' @examples
 #'
 #' long2wide(
-#' data = sample_data,
+#' data = long,
 #' ID="ID",
 #' separator="_",
 #' hemisphere="prefix",
-#' start="lh_Thalamus",
-#' end="rh_AccumbensArea"
-#' )
+#' start="region",
+#' end="rh")
 
 long2wide<-function(data,
                     ID="ID",
@@ -37,13 +36,14 @@ long2wide<-function(data,
     start<-match(start,names(data))
     end<-match(end,names(data))
 
-    ID<-data[,-c(start:end)]
+    IDV<-data[,-c(start:end)]
 
-    reshaped_data <- reshape(results,
-                             idvar = colnames(ID),
+    reshaped_data <- reshape(data=data,
+                             idvar = colnames(IDV),
                              timevar = "region",
                              direction = "wide",
                              sep=separator)
+    rownames(reshaped_data) <- NULL
 
     data<- data.frame(reshaped_data[order(reshaped_data[,ID]),])
 

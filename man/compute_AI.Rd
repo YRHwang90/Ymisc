@@ -2,7 +2,7 @@
 % Please edit documentation in R/compute_AI.R
 \name{compute_AI}
 \alias{compute_AI}
-\title{compute_AI function calculates regional brain asymmetry index (AI) using widely-used formula.
+\title{compute_AI function calculates regional brain asymmetry index (AI) using the most widely-used formula.
 AI = [(left-right)/(left+right)]}
 \usage{
 compute_AI(
@@ -29,15 +29,15 @@ compute_AI(
 
 \item{hemisphere}{The character vector that indicates whether a hemisphere indicator in the variable names is a prefix or suffix.}
 
-\item{start}{The column that specifies the starting point of the column that contains brain measures needed to calculate AI.}
+\item{start}{The column that specifies the starting point of a set of variables to calculate the AIs.}
 
-\item{end}{The column that specifies the starting point of the column that contains brain measures needed to calculate AI.}
+\item{end}{The column that specifies the endpoint of a set of variables to calculate the AIs.}
 }
 \value{
 The data with AIs.
 }
 \description{
-compute_AI function calculates regional brain asymmetry index (AI) using widely-used formula.
+compute_AI function calculates regional brain asymmetry index (AI) using the most widely-used formula.
 AI = [(left-right)/(left+right)]
 }
 \examples{

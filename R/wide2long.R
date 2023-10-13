@@ -46,6 +46,8 @@ wide2long<-function(data,
                     sep=separator,
                     timevar="region")
 
+    rownames(d) <- NULL
+
   data<-data.frame(d[order(d[,ID]),])
 
 

@@ -1,4 +1,4 @@
-#' compute_AI function calculates regional brain asymmetry index (AI) using widely-used formula.
+#' compute_AI function calculates the brain asymmetry index (AI) using the most widely-used formula.
 #' AI = [(left-right)/(left+right)]
 #'
 #' @param data The wide format data
@@ -7,8 +7,8 @@
 #' @param right_hemisphere The prefix or suffix string that indicates the right hemisphere in the variable names
 #' @param hemisphere The character vector that indicates whether a hemisphere indicator in the variable names is a prefix or suffix.
 #' @param separator A character vector that separates characters in the variable names.
-#' @param start The column that specifies the starting point of the column that contains brain measures needed to calculate AI.
-#' @param end The column that specifies the starting point of the column that contains brain measures needed to calculate AI.
+#' @param start The column that specifies the starting point of a set of variables to calculate the AIs.
+#' @param end The column that specifies the endpoint of a set of variables to calculate the AIs.
 #' @return The data with AIs.
 #'
 #' @export
@@ -31,7 +31,7 @@ compute_AI <- function(data = sample_data,
                        ID="ID",
                        hemisphere="prefix",
                        start,
-                       end  ) {
+                       end) {
 
 
 
@@ -63,8 +63,8 @@ compute_AI <- function(data = sample_data,
 
   for( i in 1:length(llist)){
 
-    data2[[paste0("AI",seperator,llist[[i]])]] <-
-      (data2[[paste0(left_hemisphere,seperator,llist[[i]])]] - data2[[paste0(right_hemisphere,seperator,llist[[i]])]]) / (data2[[paste0(left_hemisphere,seperator,llist[[i]])]] + data2[[paste0(right_hemisphere,seperator,llist[[i]])]])
+    data2[[paste0("AI",separator,llist[[i]])]] <-
+      (data2[[paste0(left_hemisphere,separator,llist[[i]])]] - data2[[paste0(right_hemisphere,separator,llist[[i]])]]) / (data2[[paste0(left_hemisphere,separator,llist[[i]])]] + data2[[paste0(right_hemisphere,separator,llist[[i]])]])
 
   }
 

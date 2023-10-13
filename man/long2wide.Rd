@@ -30,11 +30,10 @@ This function mainly targets the brain structure data that contains the data fro
 \examples{
 
 long2wide(
-data = sample_data,
+data = long,
 ID="ID",
 separator="_",
 hemisphere="prefix",
-start="lh_Thalamus",
-end="rh_AccumbensArea"
-)
+start="region",
+end="rh")
 }
