@@ -40,6 +40,8 @@ compute_total() creates new columns that are the bilateral (Left + Right) measur
 }
 \examples{
 
+data(sample_data)
+
 compute_total(sample_data,
 left_hemisphere="lh",
 right_hemisphere="rh",

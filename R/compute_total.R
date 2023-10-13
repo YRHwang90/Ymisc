@@ -17,14 +17,16 @@
 #'
 #' @examples
 #'
-#'compute_total(sample_data,
-#'left_hemisphere="lh",
-#'right_hemisphere="rh",
-#'separator="_",
-#'ID="ID",
-#'hemisphere="prefix",
-#'start="lh_Thalamus",
-#'end="rh_AccumbensArea")
+#' data(sample_data)
+#'
+#' compute_total(sample_data,
+#' left_hemisphere="lh",
+#' right_hemisphere="rh",
+#' separator="_",
+#' ID="ID",
+#' hemisphere="prefix",
+#' start="lh_Thalamus",
+#' end="rh_AccumbensArea")
 
 compute_total <- function(data=sample_data,
                        left_hemisphere="lh",

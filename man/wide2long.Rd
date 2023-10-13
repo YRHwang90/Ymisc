@@ -28,6 +28,8 @@ This function mainly targets the brain structure data that contains the data fro
 }
 \examples{
 
+data(sample_data)
+
 long<-wide2long(
 data=sample_data,
 ID="ID",

@@ -13,7 +13,11 @@
 #'
 #' @export
 #'
+#' @import stats
+#'
 #' @examples
+#'
+#' data(long)
 #'
 #' long2wide(
 #' data=long,
@@ -40,7 +44,7 @@ long2wide<-function(data,
 
     IDV <- data[,-c(start:end)]
 
-    reshaped_data <- reshape(data=data,
+    reshaped_data <- stats::reshape(data=data,
                              idvar=colnames(IDV),
                              timevar="region",
                              direction="wide",

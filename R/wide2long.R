@@ -13,10 +13,13 @@
 #'
 #' @export
 #'
+#' @import stats
 #'
 #' @examples
 #'
-#'long<-wide2long(
+#' data(sample_data)
+#'
+#' long<-wide2long(
 #' data=sample_data,
 #' ID="ID",
 #' separator="_",
@@ -41,7 +44,7 @@ wide2long<-function(data,
     start <- match(start,names(data))
     end <- match(end,names(data))
 
-    d <- reshape(data=data,
+    d <- stats::reshape(data=data,
                     direction="long",
                     idvar=ID,
                     varying=start:end,

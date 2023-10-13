@@ -28,6 +28,8 @@ This function mainly targets the brain structure data that contains the data fro
 }
 \examples{
 
+data(long)
+
 long2wide(
 data=long,
 ID="ID",
