@@ -2,7 +2,7 @@ Package: Ymisc
 Type: Package
 Title: Ymisc
 Version: 0.1.0
-Authors@R: person("Yoo Ri","Hwang", email = "yrhwang89@gmail.com", role = c("aut","cre"))
+Authors@R: person(c("Yoo Ri","Hwang"), email = "yrhwang89@gmail.com", role = c("aut","cre"))
 Maintainer: Yoo Ri Hwang <yrhwang89@gmail.com>
 Description: Yoo Ri's personal R Package that contains miscellaneous functions 
 License: GPL (>= 2)
